@@ -18,9 +18,9 @@ public class Server {
                 System.out.println("Accept from " + clientSocket.getRemoteSocketAddress() + " connection");
 
                 // 插入加载CA证书、服务器证书和私钥、生成DH密钥对的代码
-                Certificate caCertificate = KeyLoader.loadCertificate("/Users/xxy/Desktop/TLS/resources/CAcertificate.pem");
-                Certificate serverCertificate = KeyLoader.loadCertificate("/Users/xxy/Desktop/TLS/resources/CASignedServerCertificate.pem");
-                PrivateKey serverPrivateKey = KeyLoader.loadPrivateKey("/Users/xxy/Desktop/TLS/resources/serverPrivateKey.der");
+                Certificate caCertificate = KeyLoader.loadCertificate("resources/CAcertificate.pem");
+                Certificate serverCertificate = KeyLoader.loadCertificate("resources/CASignedServerCertificate.pem");
+                PrivateKey serverPrivateKey = KeyLoader.loadPrivateKey("resources/serverPrivateKey.der");
 
                 KeyPair serverDHKeyPair = DiffieHellmanUtil.generateKeyPair();
 

@@ -15,9 +15,9 @@ public class Client {
             System.out.println("Connect to server " + host + " port " + port);
 
             // 插入加载CA证书、客户端证书和私钥、生成DH密钥对的代码
-            Certificate caCertificate = KeyLoader.loadCertificate("/Users/xxy/Desktop/TLS/resources/CAcertificate.pem");
-            Certificate clientCertificate = KeyLoader.loadCertificate("/Users/xxy/Desktop/TLS/resources/CASignedClientCertificate.pem");
-            PrivateKey clientPrivateKey = KeyLoader.loadPrivateKey("/Users/xxy/Desktop/TLS/resources/clientPrivateKey.der");
+            Certificate caCertificate = KeyLoader.loadCertificate("resources/CAcertificate.pem");
+            Certificate clientCertificate = KeyLoader.loadCertificate("resources/CASignedClientCertificate.pem");
+            PrivateKey clientPrivateKey = KeyLoader.loadPrivateKey("resources/clientPrivateKey.der");
             KeyPair clientDHKeyPair = DiffieHellmanUtil.generateKeyPair();
 
             // 执行TLS握手
